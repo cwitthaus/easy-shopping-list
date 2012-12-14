@@ -1,0 +1,15 @@
+# == Schema Information
+#
+# Table name: recipe_lists
+#
+#  id        :integer          not null, primary key
+#  recipe_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recipe_id: 1
+
+two:
+  recipe_id: 1

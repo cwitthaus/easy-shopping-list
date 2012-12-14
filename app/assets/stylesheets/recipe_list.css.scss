@@ -1,0 +1,24 @@
+// Place all the styles related to the RecipeList controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.recipe-list {
+	h1 {
+		text-align: center;
+	}
+	.recipe-image {
+		img {
+			display:block;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	.ingredients {
+		h3 {
+			text-align: center;
+		}
+	}
+	.full-width-button {
+		display: block;
+		width: 100%;
+	}
+}

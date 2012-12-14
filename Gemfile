@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem "paperclip", "~> 3.0"
+gem 'jquery_mobile_rails'
+gem 'bcrypt-ruby', '3.0.1'
+gem 'best_in_place'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

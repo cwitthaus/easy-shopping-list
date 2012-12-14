@@ -13,3 +13,36 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.purr
+//= require best_in_place
+
+//= require jquery.mobile
+function remove_ingredient(link,id) {
+  $.ajax({
+  	type: 'POST',
+  	url: '/delete_potential_word',
+  	dataType: 'json',
+  	data: {id: id},
+  })
+  $(link).parent().parent().hide();
+}
+
+function add_to_shopping_list(recipe_id) {
+	$.ajax({
+		type: 'POST',
+		url: '/add_to_shopping_list',
+		dataType: 'json',
+		data: {id: recipe_id},
+	})
+}
+
+function toggleStrike(link) {
+  if (link.style.textDecoration == "line-through")
+    {
+      link.style.textDecoration = ""
+    }
+  else
+    {
+      link.style.textDecoration = "line-through"
+    }
+}

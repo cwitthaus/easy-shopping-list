@@ -1,0 +1,15 @@
+# == Schema Information
+#
+# Table name: shopping_lists
+#
+#  id   :integer          not null, primary key
+#  name :string(255)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+
+two:
+  name: MyString

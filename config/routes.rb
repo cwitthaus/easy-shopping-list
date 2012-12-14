@@ -1,4 +1,24 @@
 EasyShoppingList::Application.routes.draw do
+  get "recipe_list/create"
+
+  resources :recipes
+  resources :recipe_lists
+  resources :potential_words
+  resources :shopping_lists
+  match '/upload_recipe', to: 'recipes#new'
+  match '/parserecipe', to: 'recipe_list#create'
+  match '/delete_potential_word', to: 'potential_words#delete'
+  match '/show_shopping_list', to: 'shopping_lists#show'
+  match '/add_to_shopping_list', to: 'shopping_lists#add_to_shopping_list'
+  match '/remove_from_shopping_list', to: 'shopping_lists#remove_from_shopping_list'
+  match '/make_certain', to: 'potential_words#make_certain'
+
+  root to:'recipes#index'
+
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

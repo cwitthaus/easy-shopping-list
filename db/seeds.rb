@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ingredients = File.open('doc/ingredients').readlines.each { |line|
+	Ingredient.create(name: line.squish.singularize)
+}

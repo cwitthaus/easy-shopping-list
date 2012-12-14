@@ -1,0 +1,41 @@
+upload image
+parse for words
+for each word
+	- toss if number
+	- toss if teaspoon, tablespoon, tsp, tbl, cup, quart, pint, pound, lb, oz
+	- if those are found, then rest of line is going to be the ingredient
+	- look for the ingredient in the database list of ingredients
+	- if found, add to list
+	- if not, add to list of potential ingredients (for training)	
+		- potential ingredients should be displayed to users so they can decide which ones to use
+
+- build list
+	- hopefully with some sort of cool css/formatting
+
+
+	Models:
+		recipes:
+			- file path
+			- belongs_to a recipe_list
+
+		recipe_lists:
+			- potential words
+			- certain words
+			- has_and_belongs_to_many shopping_lists
+			- has_one recipe
+
+		potential_words
+			- word
+			- recipe_list_id
+
+		certain_words
+			- word
+			- recipe_list_id
+
+		ingredients:
+			- name
+	
+		shopping_lists:
+			- name
+			- maker (not planned, no user based stuff)
+			- recipes included

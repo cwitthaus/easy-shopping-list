@@ -1,0 +1,7 @@
+<%= form_for @recipe, :url => recipes_path, :html => { :multipart => true ,:'data-ajax' => false } do |f| %>
+	<%= text_field_tag :recipe_name %>
+
+  <%= f.file_field :image %>
+
+  <%= f.submit "Add Recipe"%>
+<% end %>

@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: potential_words
+#
+#  id             :integer          not null, primary key
+#  word           :string(255)
+#  recipe_list_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  word: MyString
+  recipe_list_id: 1
+
+two:
+  word: MyString
+  recipe_list_id: 1
