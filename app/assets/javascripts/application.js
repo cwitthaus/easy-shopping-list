@@ -16,15 +16,26 @@
 //= require jquery.purr
 //= require best_in_place
 
-//= require jquery.mobile
 function remove_ingredient(link,id) {
   $.ajax({
   	type: 'POST',
   	url: '/delete_potential_word',
   	dataType: 'json',
-  	data: {id: id},
+  	data: {word: id},
   })
-  $(link).parent().parent().hide();
+  $(link).parent().hide();
+}
+
+function make_certain(link, id) {
+  $.ajax({
+    type: 'POST',
+    url: '/make_certain',
+    dataType: 'json',
+    data: {word: id},
+    success: function(data) {
+       $(link).parent().parent().append(data);
+    }
+  }) 
 }
 
 function add_to_shopping_list(recipe_id) {

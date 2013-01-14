@@ -1,5 +1,5 @@
 <li>
 	<%= best_in_place potential_word, :word %>
 	<%= button_to_remove_word(potential_word) %>
-	<%= button_to "Make Certain", make_certain_path(:params => {:word => potential_word}) %>
+	<%= button_to_make_certain(potential_word) %>
 </li>

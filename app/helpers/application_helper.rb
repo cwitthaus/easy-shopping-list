@@ -12,6 +12,10 @@ module ApplicationHelper
 		button_to_function("Remove Ingredient", "remove_ingredient(this,#{word.id})")
 	end
 
+	def button_to_make_certain(word)
+		button_to_function("Confirm Ingredient", "make_certain(this,#{word.id})")
+	end
+
 	def add_recipe_to_shopping_list(recipe_id)
 		button_to_function("Add to Shopping List", "add_to_shopping_list(#{recipe_id})")
 	end

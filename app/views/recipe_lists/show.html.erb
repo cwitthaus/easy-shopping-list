@@ -11,8 +11,8 @@
 	<% end %>
 	<br>
 	<div class="ingredients">
-		<ul data-role="listview">
-			<li data-role="list-divider">
+		<ul>
+			<li>
 			 	<h3>Ingredients<h3>
 			</li>
 		<% if @certain_words.any? %>
@@ -23,7 +23,7 @@
 		<% end %>
 		</ul>
 	</div>
-	<div data-role="footer" data-position="fixed"> 
+	<div> 
 		<%= link_to "Add to Shopping List", add_to_shopping_list_path(:params => {:recipe_list_id => @recipe_list.id}), :class => "full-width-button"%>
 	</div>
 </div>

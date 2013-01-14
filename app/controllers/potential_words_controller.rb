@@ -10,7 +10,7 @@ class PotentialWordsController < ActionController::Base
 
 	def update
 		logger.debug "ATTEMPTING TO UPDATE"
-	  @word = PotentialWord.find(params[:id])
+	  @word = PotentialWord.find(params[:word])
 	  @word.update_attributes(:word => params[:potential_word][:word])
 	  respond_with @word
 	end
@@ -19,9 +19,8 @@ class PotentialWordsController < ActionController::Base
 		logger.debug params
 		logger.debug "attempting to make certain #{params[:word]}"
 		potential_word = PotentialWord.find(params[:word])
-		CertainWord.create(:word => potential_word.word, :recipe_list_id => potential_word.recipe_list_id)
-		@recipe_list = RecipeList.find(potential_word.recipe_list_id)
+		@certain_word = CertainWord.create(:word => potential_word.word, :recipe_list_id => potential_word.recipe_list_id)
 		potential_word.destroy
-		redirect_to @recipe_list
+		render :json => @certain_word
 	end
 end
